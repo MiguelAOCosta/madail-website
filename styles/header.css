@@ -17,12 +17,17 @@ header {
 
 .header-container {
   width: 100%;
+  height: 100%;
 }
 
 nav {
+  height: 100%;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  border-bottom: 1px solid var(--color-border);
 }
 
 .logo > a {
@@ -51,6 +56,30 @@ nav {
   padding: 1rem 1.5rem;
 
   background-color: #000;
+}
+
+.nav-container::before {
+  content: "MENU";
+
+  position: absolute;
+  top: var(--space-5);
+  left: 1.5rem;
+
+  color: var(--color-primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
+.nav-container::after {
+  content: "MADAIL";
+
+  position: absolute;
+  bottom: var(--space-5);
+  left: 1.5rem;
+
+  color: var(--color-primary-soft);
+  font-size: clamp(var(--font-size-2xl), 7vw, var(--font-size-3xl));
+  font-weight: var(--font-weight-semibold);
 }
 
 .nav-container > ul {
@@ -93,6 +122,13 @@ nav {
   transform: translateY(-2px);
 }
 
+.menu-btns {
+  display: flex;
+  align-items: center;
+
+  gap: var(--space-8);
+}
+
 .menu-hamburger {
   width: var(--space-9);
   aspect-ratio: 1;
@@ -114,6 +150,20 @@ nav {
   height: 2px;
 
   background-color: var(--color-text);
+
+  transition: var(--transition-base);
+}
+
+.menu-hamburger.active span:nth-of-type(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-hamburger.active span:nth-of-type(2) {
+  width: 0;
+}
+
+.menu-hamburger.active span:nth-of-type(3) {
+  transform: rotate(-45deg) translate(5px, -6px);
 }
 
 .nav-info p {
