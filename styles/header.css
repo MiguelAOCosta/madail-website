@@ -12,7 +12,7 @@ header {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 
-  z-index: 999;
+  z-index: var(--z-modal);
 }
 
 .header-container {
@@ -52,13 +52,20 @@ nav {
   left: 0;
 
   width: 100%;
-  height: calc(100vh - var(--header-height));
+  height: 0;
   padding: 1rem 1.5rem;
+
+  overflow: hidden;
+  transition: var(--transition-smooth);
+}
+
+.nav-container.active {
+  height: calc(100vh - var(--header-height));
 
   background-color: #000;
 }
 
-.nav-container::before {
+.nav-container.active::before {
   content: "MENU";
 
   position: absolute;
@@ -70,14 +77,14 @@ nav {
   font-weight: var(--font-weight-semibold);
 }
 
-.nav-container::after {
+.nav-container.active::after {
   content: "MADAIL";
 
   position: absolute;
   bottom: var(--space-5);
   left: 1.5rem;
 
-  color: var(--color-primary-soft);
+  color: var(--color-primary-glow);
   font-size: clamp(var(--font-size-2xl), 7vw, var(--font-size-3xl));
   font-weight: var(--font-weight-semibold);
 }
@@ -89,7 +96,7 @@ nav {
   margin-block: var(--space-8);
 }
 
-.nav-container > ul li {
+.nav-container > ul li a {
   display: flex;
   justify-content: space-between;
 
@@ -122,7 +129,7 @@ nav {
   transform: translateY(-2px);
 }
 
-.menu-btns {
+.menu-container {
   display: flex;
   align-items: center;
 
@@ -155,7 +162,7 @@ nav {
 }
 
 .menu-hamburger.active span:nth-of-type(1) {
-  transform: rotate(45deg) translate(6px, 6px);
+  transform: rotate(45deg) translate(6px, 5px);
 }
 
 .menu-hamburger.active span:nth-of-type(2) {
@@ -163,11 +170,71 @@ nav {
 }
 
 .menu-hamburger.active span:nth-of-type(3) {
-  transform: rotate(-45deg) translate(5px, -6px);
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 .nav-info p {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
   margin-bottom: var(--space-3);
+}
+
+.menu-container > .btn-secundary {
+  display: none;
+}
+
+@media screen and (min-width: 900px) {
+  .nav-container {
+    height: auto;
+    padding: 0;
+
+    position: initial;
+
+    display: flex;
+    overflow: visible;
+  }
+
+  .nav-container.active {
+    background-color: transparent;
+  }
+
+  .nav-container.active::before,
+  .nav-container.active::after {
+    display: none;
+  }
+
+  .nav-container > ul {
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .nav-container > ul li a {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+
+    padding-block: 0;
+
+    border: none;
+  }
+
+  .nav-container > ul li a span {
+    display: none;
+  }
+
+  .nav-container > .btn-primary {
+    display: none;
+  }
+
+  .nav-info {
+    display: none;
+  }
+
+  .menu-hamburger {
+    display: none;
+  }
+
+  .menu-container > .btn-secundary {
+    display: flex;
+  }
 }
