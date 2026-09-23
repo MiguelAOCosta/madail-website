@@ -211,6 +211,10 @@ body {
   overflow-x: hidden;
 }
 
+body.menu-open {
+  overflow: hidden;
+}
+
 img {
   display: block;
   width: 100%;
@@ -219,6 +223,12 @@ img {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 1px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 ul {
@@ -298,17 +308,17 @@ button {
   background-color: var(--color-primary-hover);
 }
 
-.btn-primary > span {
+.btn-primary > i {
   font-weight: var(--font-weight-medium);
 
   transition: var(--transition-base);
 }
 
-.btn-primary:hover span {
+.btn-primary:hover i {
   transform: translateY(-2px);
 }
 
-.btn-secundary {
+.btn-secondary {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -330,16 +340,16 @@ button {
   transition: var(--transition-base);
 }
 
-.btn-secundary:hover {
+.btn-secondary:hover {
   background-color: var(--color-border-hover);
 }
 
-.btn-secundary > span {
+.btn-secondary > i {
   font-weight: var(--font-weight-medium);
 
   transition: var(--transition-base);
 }
 
-.btn-secundary:hover span {
+.btn-secondary:hover i {
   transform: translateY(-2px);
 }

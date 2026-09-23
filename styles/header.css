@@ -12,7 +12,7 @@ header {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 
-  z-index: var(--z-modal);
+  z-index: var(--z-header);
 }
 
 .header-container {
@@ -53,14 +53,24 @@ nav {
 
   width: 100%;
   height: 0;
-  padding: 1rem 1.5rem;
+  padding-inline: 1.5rem;
 
   overflow: hidden;
+
+  visibility: hidden;
+  pointer-events: none;
+
   transition: var(--transition-smooth);
 }
 
 .nav-container.active {
-  height: calc(100vh - var(--header-height));
+  height: calc(100dvh - var(--header-height));
+  padding-block: 1rem;
+
+  visibility: visible;
+  pointer-events: auto;
+
+  overflow-y: auto;
 
   background-color: #000;
 }
@@ -116,7 +126,7 @@ nav {
   color: var(--color-text-secondary);
 }
 
-.nav-container > ul li span {
+.nav-container > ul li i {
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-medium);
 
@@ -125,7 +135,7 @@ nav {
   transition: var(--transition-base);
 }
 
-.nav-container > ul li:hover span {
+.nav-container > ul li:hover i {
   transform: translateY(-2px);
 }
 
@@ -173,13 +183,18 @@ nav {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-.nav-info p {
+.nav-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-info a {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
   margin-bottom: var(--space-3);
 }
 
-.menu-container > .btn-secundary {
+.menu-container > .btn-secondary {
   display: none;
 }
 
@@ -192,9 +207,13 @@ nav {
 
     display: flex;
     overflow: visible;
+
+    visibility: visible;
+    pointer-events: auto;
   }
 
   .nav-container.active {
+    height: auto;
     background-color: transparent;
   }
 
@@ -205,8 +224,10 @@ nav {
 
   .nav-container > ul {
     flex-direction: row;
-    gap: 2rem;
     align-items: center;
+
+    gap: 2rem;
+    margin-block: 0;
   }
 
   .nav-container > ul li a {
@@ -218,7 +239,7 @@ nav {
     border: none;
   }
 
-  .nav-container > ul li a span {
+  .nav-container > ul li a i {
     display: none;
   }
 
@@ -234,7 +255,7 @@ nav {
     display: none;
   }
 
-  .menu-container > .btn-secundary {
+  .menu-container > .btn-secondary {
     display: flex;
   }
 }
