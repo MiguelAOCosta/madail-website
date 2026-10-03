@@ -81,7 +81,7 @@
 
   --container-max: 1280px;
   --container-wide: 1440px;
-  --container-padding: clamp(20px, 4vw, 64px);
+  --container-padding: 1.5rem;
 
   /* =========================================================
      SPACING
@@ -299,6 +299,7 @@ button {
   border-radius: var(--radius-pill);
 
   background-color: var(--color-cta);
+  border: 1px solid var(--color-primary-hover);
 
   transition: var(--transition-base);
 }
@@ -357,7 +358,7 @@ button {
 .container {
   width: 100%;
   max-width: var(--container-max);
-  padding-inline: 1.5rem;
+  padding-inline: var(--container-padding);
   margin-inline: auto;
   box-sizing: border-box;
 }

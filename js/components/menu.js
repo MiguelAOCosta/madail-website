@@ -17,26 +17,28 @@ export function menuMobile() {
   });
 
   navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      hamburgerMenu.classList.remove("active");
-      navContainer.classList.remove("active");
-      document.body.classList.remove("menu-open");
-
-      hamburgerMenu.setAttribute("aria-expanded", "false");
-      hamburgerMenu.setAttribute("aria-label", "Abrir menu");
-    });
+    link.addEventListener("click", closeMenu);
   });
 
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      hamburgerMenu.classList.remove("active");
-      navContainer.classList.remove("active");
-      document.body.classList.remove("menu-open");
-
-      hamburgerMenu.setAttribute("aria-expanded", "false");
-      hamburgerMenu.setAttribute("aria-label", "Abrir menu");
-
+    if (event.key === "Escape" && navContainer.classList.contains("active")) {
+      closeMenu();
       hamburgerMenu.focus();
     }
   });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 900) {
+      closeMenu();
+    }
+  });
+
+  function closeMenu() {
+    hamburgerMenu.classList.remove("active");
+    navContainer.classList.remove("active");
+    document.body.classList.remove("menu-open");
+
+    hamburgerMenu.setAttribute("aria-expanded", "false");
+    hamburgerMenu.setAttribute("aria-label", "Abrir menu");
+  }
 }
