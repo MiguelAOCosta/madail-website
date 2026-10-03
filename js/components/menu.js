@@ -26,4 +26,17 @@ export function menuMobile() {
       hamburgerMenu.setAttribute("aria-label", "Abrir menu");
     });
   });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      hamburgerMenu.classList.remove("active");
+      navContainer.classList.remove("active");
+      document.body.classList.remove("menu-open");
+
+      hamburgerMenu.setAttribute("aria-expanded", "false");
+      hamburgerMenu.setAttribute("aria-label", "Abrir menu");
+
+      hamburgerMenu.focus();
+    }
+  });
 }
