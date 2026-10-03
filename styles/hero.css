@@ -15,6 +15,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: var(--space-8);
 
   padding-block: var(--space-24);
 }
@@ -22,6 +23,12 @@
 .slogan {
   font-size: clamp(var(--font-size-xl), 9vw, var(--font-size-4xl));
   letter-spacing: var(--letter-spacing-wide);
+}
+
+.btns-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
 }
 
 .hero-info {
@@ -46,7 +53,7 @@
   }
 
   .btns-container {
-    display: flex;
+    flex-direction: row;
     align-items: center;
     gap: var(--space-12);
   }

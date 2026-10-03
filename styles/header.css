@@ -138,6 +138,10 @@ nav {
   transform: translateY(-2px);
 }
 
+.nav-container > .btn-primary {
+  margin-block: var(--space-12);
+}
+
 .menu-container {
   display: flex;
   align-items: center;
