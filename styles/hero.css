@@ -5,22 +5,20 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
-  min-height: 100dvh;
 }
 
 .hero-container {
-  min-height: 100dvh;
-
   display: flex;
   flex-direction: column;
-  gap: var(--space-8);
+  gap: clamp(var(--space-5), 3dvh, var(--space-8));
 
-  padding-block: var(--space-24);
+  padding-top: calc(var(--header-height) + var(--space-6));
+  padding-bottom: var(--space-12);
 }
 
 .slogan {
   font-size: clamp(var(--font-size-xl), 9vw, var(--font-size-4xl));
+  line-height: var(--line-height-tight);
   letter-spacing: var(--letter-spacing-wide);
 }
 
@@ -31,8 +29,8 @@
 }
 
 .hero-info {
-  margin-top: auto;
-  padding-top: var(--space-6);
+  margin-top: var(--space-6);
+  padding-top: var(--space-5);
 
   border-top: 2px solid var(--color-border);
 
@@ -61,5 +59,21 @@
 
   .hero-info {
     flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero,
+  .hero-container {
+    min-height: 100dvh;
+  }
+
+  .hero-container {
+    padding-block: var(--space-24);
+    gap: var(--space-8);
+  }
+
+  .hero-info {
+    margin-top: auto;
   }
 }

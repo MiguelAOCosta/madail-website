@@ -2,6 +2,7 @@ export function menuMobile() {
   const hamburgerMenu = document.querySelector(".menu-hamburger");
   const navContainer = document.querySelector(".nav-container");
   const navLinks = document.querySelectorAll(".nav-container a");
+  const desktopMedia = window.matchMedia("(min-width: 1024px)");
 
   hamburgerMenu.addEventListener("click", () => {
     const isOpen = hamburgerMenu.classList.toggle("active");
@@ -27,8 +28,8 @@ export function menuMobile() {
     }
   });
 
-  window.addEventListener("resize", () => {
-    if (window.innerWidth >= 900) {
+  desktopMedia.addEventListener("change", (event) => {
+    if (event.matches) {
       closeMenu();
     }
   });
