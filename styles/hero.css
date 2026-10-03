@@ -20,7 +20,7 @@
 }
 
 .slogan {
-  font-size: clamp(var(--font-size-3xl), 9vw, var(--font-size-4xl));
+  font-size: clamp(var(--font-size-xl), 9vw, var(--font-size-4xl));
   letter-spacing: var(--letter-spacing-wide);
 }
 
