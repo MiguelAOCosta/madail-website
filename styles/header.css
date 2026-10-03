@@ -17,6 +17,10 @@ header {
 .header-container {
   width: 100%;
   height: 100%;
+  max-width: var(--container-max);
+
+  padding-inline: var(--container-padding);
+  margin-inline: auto;
 }
 
 nav {
@@ -96,6 +100,11 @@ nav {
   color: var(--color-primary-glow);
   font-size: clamp(var(--font-size-2xl), 7vw, var(--font-size-3xl));
   font-weight: var(--font-weight-semibold);
+
+  pointer-events: none;
+  user-select: none;
+
+  z-index: 0;
 }
 
 .nav-container > ul {

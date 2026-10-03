@@ -358,9 +358,12 @@ button {
 .container {
   width: 100%;
   max-width: var(--container-max);
+
   padding-inline: var(--container-padding);
+  padding-top: calc(var(--header-height) + var(--space-6));
+  padding-bottom: var(--space-12);
+
   margin-inline: auto;
-  box-sizing: border-box;
 }
 
 .secondary-title {
@@ -373,4 +376,10 @@ button {
 .primary-info {
   color: var(--color-text-secondary);
   font-size: var(--font-size-md);
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    padding-block: var(--space-24);
+  }
 }
