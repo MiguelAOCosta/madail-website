@@ -1,5 +1,6 @@
 @import url("header.css");
 @import url("hero.css");
+@import url("about.css");
 
 :root {
   /* =========================================================
@@ -56,6 +57,7 @@
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
+  --font-size-2xs: 0.675rem;
   --font-size-xs: 0.75rem; /* 12px */
   --font-size-sm: 0.875rem; /* 14px */
   --font-size-base: 1rem; /* 16px */
@@ -366,16 +368,49 @@ button {
   margin-inline: auto;
 }
 
+.primary-title {
+  font-size: clamp(var(--font-size-lg), 5vw, var(--font-size-2xl));
+}
+
 .secondary-title {
   color: var(--color-primary);
   font-weight: var(--font-weight-semibold);
   font-size: var(--font-size-sm);
   letter-spacing: var(--letter-spacing-wide);
+
+  margin-bottom: var(--space-8);
 }
 
 .primary-info {
   color: var(--color-text-secondary);
   font-size: var(--font-size-md);
+}
+
+.section-intro {
+  margin-block: var(--space-16);
+}
+
+.process-flow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+
+  margin-block: var(--space-8);
+
+  color: var(--color-text-secondary);
+
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-bold);
+}
+
+@media screen and (min-width: 900px) {
+  .section-intro {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+    align-items: start;
+  }
 }
 
 @media screen and (min-width: 1024px) {
