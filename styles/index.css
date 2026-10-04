@@ -388,6 +388,11 @@ button {
 
 .section-intro {
   margin-block: var(--space-16);
+
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  gap: var(--space-8);
+  align-items: start;
 }
 
 .process-flow {
@@ -406,10 +411,7 @@ button {
 
 @media screen and (min-width: 900px) {
   .section-intro {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-8);
-    align-items: start;
   }
 }
 
