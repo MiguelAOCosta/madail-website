@@ -2,6 +2,10 @@
   background-color: var(--color-bg);
 }
 
+.about .primary-info {
+  margin-bottom: var(--space-16);
+}
+
 .about-cards-container {
   display: grid;
   grid-template-columns: 1fr;
