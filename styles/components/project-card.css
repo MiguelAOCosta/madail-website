@@ -1,8 +1,3 @@
-.projects-container {
-  display: grid;
-  gap: var(--space-4);
-}
-
 .project-card {
   position: relative;
 
@@ -110,11 +105,6 @@
 }
 
 @media screen and (min-width: 800px) {
-  .projects-container {
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: repeat(2, auto);
-  }
-
   .project-card--featured h3 {
     font-size: clamp(var(--font-size-xl), 3vw, var(--font-size-2xl));
   }

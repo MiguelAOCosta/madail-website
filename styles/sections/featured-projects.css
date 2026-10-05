@@ -1,12 +1,22 @@
-.projects {
+.featured-projects {
   background-color: var(--color-bg-secondary);
 }
 
-.projects .section-intro > div {
+.featured-projects .section-intro > div {
   justify-self: start;
 }
 
+.featured-projects-grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
 @media screen and (min-width: 800px) {
+  .featured-projects-grid {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, auto);
+  }
+
   .project-card--featured {
     grid-row: 1 / span 2;
 
@@ -20,7 +30,7 @@
 }
 
 @media screen and (min-width: 900px) {
-  .projects .section-intro > div {
+  .featured-projects .section-intro > div {
     justify-self: end;
   }
 }
