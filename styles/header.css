@@ -23,7 +23,7 @@ header {
   margin-inline: auto;
 }
 
-nav {
+.main-nav {
   height: 100%;
 
   display: flex;
@@ -144,7 +144,7 @@ nav {
 }
 
 .nav-container > ul li:hover i {
-  transform: translateY(-2px);
+  transform: translate(2px, -2px);
 }
 
 .nav-container > .btn-primary {

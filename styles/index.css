@@ -1,6 +1,12 @@
 @import url("header.css");
 @import url("hero.css");
 @import url("about.css");
+@import url("projects.css");
+
+@import url("components/buttons.css");
+@import url("components/project-card.css");
+@import url("components/links.css");
+@import url("components/section.css");
 
 :root {
   /* =========================================================
@@ -49,7 +55,6 @@
   /* =========================================================
      TYPOGRAPHY
      ========================================================= */
-
   --font-primary: "Inter", Arial, sans-serif;
 
   --font-weight-regular: 400;
@@ -125,6 +130,8 @@
 
   --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.35);
 
+  --shadow-strong: 0 4px 16px rgb(0, 0, 0);
+
   --shadow-primary: 0 4px 6px var(--color-primary-glow);
 
   /* =========================================================
@@ -187,6 +194,8 @@
   --z-modal: 1000;
 }
 
+/* RESETS */
+
 *,
 *::after,
 *::before {
@@ -248,153 +257,6 @@ button {
   cursor: pointer;
 }
 
-.change-language {
-  min-width: var(--space-20);
-  height: var(--space-8);
-
-  background-color: var(--color-border);
-  border: 1px solid var(--color-border-hover);
-  border-radius: var(--radius-pill);
-
-  color: var(--color-text);
-  font-size: var(--font-size-xs);
-
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
-  position: relative;
-
-  z-index: var(--z-overlay);
-}
-
-.change-language::before {
-  content: "";
-
-  position: absolute;
-  top: 50%;
-  left: 2px;
-  transform: translateY(-50%);
-
-  width: 50%;
-  height: var(--space-7);
-
-  background-color: var(--color-cta);
-
-  border-radius: var(--card-radius);
-
-  z-index: -1;
-}
-
-.btn-primary {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  height: var(--button-height);
-  padding-inline: var(--button-padding-x);
-
-  font-size: var(--button-font-size);
-  font-weight: var(--button-font-weight);
-  letter-spacing: var(--letter-spacing-wide);
-
-  border-radius: var(--radius-pill);
-
-  background-color: var(--color-cta);
-  border: 1px solid var(--color-primary-hover);
-
-  transition: var(--transition-base);
-}
-
-.btn-primary:hover {
-  background-color: var(--color-cta-hover);
-}
-
-.btn-primary > i {
-  font-weight: var(--font-weight-medium);
-
-  transition: var(--transition-base);
-}
-
-.btn-primary:hover i {
-  transform: translateY(-2px);
-}
-
-.btn-secondary {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: var(--space-3);
-
-  height: var(--button-height);
-  padding-inline: var(--button-padding-x);
-
-  flex-shrink: 0;
-  white-space: nowrap;
-
-  font-size: var(--button-font-size);
-  font-weight: var(--button-font-weight);
-  letter-spacing: var(--letter-spacing-wide);
-
-  border-radius: var(--radius-pill);
-  background-color: var(--color-bg);
-  border: 1px solid var(--color-border-hover);
-
-  transition: var(--transition-base);
-}
-
-.btn-secondary:hover {
-  background-color: var(--color-bg-secondary);
-}
-
-.btn-secondary > i {
-  font-weight: var(--font-weight-medium);
-
-  transition: var(--transition-base);
-}
-
-.btn-secondary:hover i {
-  transform: translateY(-2px);
-}
-
-.container {
-  width: 100%;
-  max-width: var(--container-max);
-
-  padding-inline: var(--container-padding);
-  padding-top: calc(var(--header-height) + var(--space-6));
-  padding-bottom: var(--space-12);
-
-  margin-inline: auto;
-}
-
-.primary-title {
-  font-size: clamp(var(--font-size-lg), 5vw, var(--font-size-2xl));
-}
-
-.secondary-title {
-  color: var(--color-primary);
-  font-weight: var(--font-weight-semibold);
-  font-size: var(--font-size-sm);
-  letter-spacing: var(--letter-spacing-wide);
-
-  margin-bottom: var(--space-8);
-}
-
-.primary-info {
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-md);
-}
-
-.section-intro {
-  margin-block: var(--space-16);
-
-  display: grid;
-  grid-template-columns: repeat(1fr);
-  gap: var(--space-8);
-  align-items: start;
-}
-
 .process-flow {
   display: flex;
   align-items: center;
@@ -409,14 +271,8 @@ button {
   font-weight: var(--font-weight-bold);
 }
 
-@media screen and (min-width: 900px) {
-  .section-intro {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+.process-flow i {
+  font-weight: var(--font-weight-bold);
 
-@media screen and (min-width: 1024px) {
-  .container {
-    padding-block: var(--space-24);
-  }
+  transition: var(--transition-base);
 }

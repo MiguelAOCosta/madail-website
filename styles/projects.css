@@ -1,0 +1,26 @@
+.projects {
+  background-color: var(--color-bg-secondary);
+}
+
+.projects .section-intro > div {
+  justify-self: start;
+}
+
+@media screen and (min-width: 800px) {
+  .project-card--featured {
+    grid-row: 1 / span 2;
+
+    height: auto;
+  }
+
+  .project-card:not(.project-card--featured) {
+    min-height: 0;
+    height: clamp(240px, 26vw, 320px);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .projects .section-intro > div {
+    justify-self: end;
+  }
+}

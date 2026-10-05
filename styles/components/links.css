@@ -1,0 +1,21 @@
+/* LINK GENÉRICO */
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+
+  color: var(--color-text-secondary);
+
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.text-link i {
+  transition: var(--transition-base);
+}
+
+.text-link:hover i {
+  transform: translate(2px, -2px);
+}

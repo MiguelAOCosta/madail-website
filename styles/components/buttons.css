@@ -1,0 +1,109 @@
+.change-language {
+  min-width: var(--space-20);
+  height: var(--space-8);
+
+  background-color: var(--color-border);
+  border: 1px solid var(--color-border-hover);
+  border-radius: var(--radius-pill);
+
+  color: var(--color-text);
+  font-size: var(--font-size-xs);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  position: relative;
+
+  z-index: var(--z-overlay);
+}
+
+.change-language::before {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  transform: translateY(-50%);
+
+  width: 50%;
+  height: var(--space-7);
+
+  background-color: var(--color-cta);
+
+  border-radius: var(--card-radius);
+
+  z-index: -1;
+}
+
+.btn-primary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3);
+
+  height: var(--button-height);
+  padding-inline: var(--button-padding-x);
+
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  letter-spacing: var(--letter-spacing-wide);
+
+  border-radius: var(--radius-pill);
+
+  background-color: var(--color-cta);
+  border: 1px solid var(--color-primary-hover);
+
+  transition: var(--transition-base);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-cta-hover);
+}
+
+.btn-primary > i {
+  font-weight: var(--font-weight-medium);
+
+  transition: var(--transition-base);
+}
+
+.btn-primary:hover i {
+  transform: translate(2px, -2px);
+}
+
+.btn-secondary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3);
+
+  height: var(--button-height);
+  padding-inline: var(--button-padding-x);
+
+  flex-shrink: 0;
+  white-space: nowrap;
+
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  letter-spacing: var(--letter-spacing-wide);
+
+  border-radius: var(--radius-pill);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border-hover);
+
+  transition: var(--transition-base);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-bg-secondary);
+}
+
+.btn-secondary > i {
+  font-weight: var(--font-weight-medium);
+
+  transition: var(--transition-base);
+}
+
+.btn-secondary:hover i {
+  transform: translate(2px, -2px);
+}
