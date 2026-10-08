@@ -32,30 +32,6 @@
   gap: var(--space-4);
 }
 
-.home-about-cards div {
-  background-color: var(--color-card);
-
-  border-radius: var(--card-radius);
-  border: 1px solid var(--card-border);
-
-  padding: var(--space-5);
-
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-}
-
-.home-about-cards div strong {
-  font-size: var(--font-size-2xl);
-}
-
-.home-about-cards div p {
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-2xs);
-  font-weight: var(--font-weight-semibold);
-  letter-spacing: var(--letter-spacing-wide);
-}
-
 @media screen and (min-width: 600px) {
   .home-about-cards {
     grid-template-columns: repeat(2, 1fr);

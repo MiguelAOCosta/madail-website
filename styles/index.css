@@ -13,8 +13,11 @@
 @import url("./components/links.css");
 @import url("./components/project-card.css");
 @import url("./components/language-switcher.css");
+@import url("./components/section.css");
+@import url("./components/cards.css");
 
 /* HOME */
 @import url("./sections/hero.css");
 @import url("./sections/home-about.css");
 @import url("./sections/featured-projects.css");
+@import url("./sections/home-services.css");
