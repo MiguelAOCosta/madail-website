@@ -2,18 +2,27 @@
   background-color: var(--color-bg);
 }
 
-.home-services-list {
-  padding-top: var(--space-4);
-}
-
 .home-services-list li {
   display: grid;
-  gap: var(--space-8);
 
-  margin-top: var(--space-16);
+  row-gap: var(--space-4);
+  column-gap: var(--space-8);
+
   padding-top: var(--space-4);
 
   border-top: 1px solid var(--color-border);
+}
+
+.home-services-list li + li {
+  margin-top: var(--space-16);
+}
+
+.service-number {
+  color: var(--color-primary);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-wide);
 }
 
 .home-services-list .text-link {
@@ -26,6 +35,13 @@
 
 @media screen and (min-width: 900px) {
   .home-services-list li {
-    grid-template-columns: 50px 1fr 1fr 150px;
+    grid-template-columns: 50px 0.8fr 1.4fr auto;
+
+    align-items: start;
+  }
+
+  .home-services-list .text-link {
+    justify-self: end;
+    white-space: nowrap;
   }
 }
