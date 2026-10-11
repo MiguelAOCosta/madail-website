@@ -17,14 +17,6 @@
   margin-top: var(--space-16);
 }
 
-.service-number {
-  color: var(--color-primary);
-
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-semibold);
-  letter-spacing: var(--letter-spacing-wide);
-}
-
 .home-services-list .text-link {
   color: var(--color-text);
 }
