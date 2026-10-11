@@ -3,10 +3,16 @@
   max-width: var(--container-max);
 
   padding-inline: var(--container-padding);
+  margin-inline: auto;
+}
+
+.hero .container {
   padding-top: calc(var(--header-height) + var(--space-6));
   padding-bottom: var(--space-12);
+}
 
-  margin-inline: auto;
+main > section:not(.hero) {
+  padding-block: var(--space-16);
 }
 
 .section-intro {
@@ -26,7 +32,11 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .container {
+  main > section:not(.hero) {
+    padding-block: var(--space-24);
+  }
+
+  .hero .container {
     padding-block: var(--space-24);
   }
 }
