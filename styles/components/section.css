@@ -1,5 +1,6 @@
 .primary-title {
   font-size: clamp(var(--font-size-lg), 5vw, var(--font-size-2xl));
+  font-weight: var(--font-weight-semibold);
 }
 
 .secondary-title {
