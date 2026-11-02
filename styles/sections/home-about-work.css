@@ -8,6 +8,11 @@
   gap: var(--space-8);
 }
 
+.home-about-work-img {
+  border-radius: var(--card-radius);
+  object-fit: cover;
+}
+
 .home-about-work .section-intro .text-link {
   color: var(--color-text);
 }
@@ -18,6 +23,7 @@
 
 .home-about-work-list {
   display: grid;
+  gap: var(--space-16);
 }
 
 .home-about-work-list li {
@@ -36,35 +42,21 @@
 
 .home-about-work-list li > i {
   margin-top: var(--space-4);
-  width: 80px;
 
   display: none;
-}
-
-.home-about-work-list li + li {
-  margin-top: var(--space-16);
 }
 
 @media screen and (min-width: 600px) {
   .home-about-work-list {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-4);
-  }
-
-  .home-about-work-list li {
-    margin-top: var(--space-16);
+    gap: var(--space-8);
   }
 }
 
 @media screen and (min-width: 1100px) {
   .home-about-work-list {
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--space-4);
-  }
-
-  .home-about-work-list li {
-    margin-top: var(--space-16);
   }
 
   .home-about-work-list li > i {
