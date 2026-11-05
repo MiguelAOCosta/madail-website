@@ -23,3 +23,7 @@
 @import url("./sections/featured-projects.css");
 @import url("./sections/home-services.css");
 @import url("./sections/home-about-work.css");
+
+/* ALL PAGES */
+
+@import url("./sections/contact-section.css");

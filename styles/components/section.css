@@ -14,7 +14,15 @@
 
 .primary-info {
   color: var(--color-text-secondary);
+
   font-size: var(--font-size-md);
+}
+
+.secondary-info {
+  color: var(--color-text-secondary);
+
+  font-size: var(--font-size-sm);
+  letter-spacing: var(--letter-spacing-wide);
 }
 
 .list-title {

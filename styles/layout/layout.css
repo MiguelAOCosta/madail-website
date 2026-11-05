@@ -11,7 +11,7 @@
   padding-bottom: var(--space-12);
 }
 
-main > section:not(.hero) {
+main > section:not(.hero, .section-contact) {
   padding-block: var(--space-16);
 }
 
@@ -32,7 +32,7 @@ main > section:not(.hero) {
 }
 
 @media screen and (min-width: 1024px) {
-  main > section:not(.hero) {
+  main > section:not(.hero, .section-contact) {
     padding-block: var(--space-24);
   }
 
