@@ -4,7 +4,6 @@ footer {
 
   display: flex;
   align-items: center;
-  padding-block: var(--space-8);
 
   background-color: #000;
 
@@ -17,7 +16,10 @@ footer {
   max-width: var(--container-max);
 
   padding-inline: var(--container-padding);
+  padding-block: var(--space-8);
   margin-inline: auto;
+
+  border-top: 2px solid var(--color-border);
 }
 
 .footer-content {
